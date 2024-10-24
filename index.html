@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nawaraj Khanal - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="background"></canvas> <!-- Add canvas for background -->
+    <div id="terminal">
+        <div id="terminal-output">
+            <p id="welcome-text"></p>
+            <ul id="command-list">
+                <li><a href="home.html" data-command="home">home</a></li>
+                <li><a href="about.html" data-command="about">about</a></li>
+                <li><a href="project.html" data-command="projects">projects</a></li>
+                <li><a href="social.html" data-command="socials">socials</a></li>
+                <li><a href="contact.html" data-command="contact">contact</a></li>
+            </ul>
+        </div>
+        <div id="terminal-input">
+            <span>&gt;</span> <input type="text" id="command-input" autofocus>
+            <span id="cursor">|</span>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

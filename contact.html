@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nawaraj Khanal</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #1e1e1e;
+            color: #00ff00;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Flying card animation */
+        .card {
+            position: absolute;
+            width: 100px;
+            height: 140px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #00ff7f;
+            border-radius: 10px;
+            animation: fly 10s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translate(-100px, 100vh) rotate(0deg);
+            }
+            100% {
+                transform: translate(100vw, -100px) rotate(360deg);
+            }
+        }
+
+        .contact-container {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease;
+            z-index: 1; /* Ensure the contact card is above the flying cards */
+        }
+
+        .contact-container h1 {
+            color: #00ff7f;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0; /* Start hidden for animation */
+            animation: slideIn 1s forwards; /* Slide-in animation */
+            animation-delay: 0.5s; /* Delay for contact info */
+        }
+
+        .contact-item {
+            margin: 10px 0;
+            font-size: 16px;
+            animation: popIn 0.5s forwards; /* Pop-in animation for each item */
+            animation-delay: 0.7s; /* Stagger animation for items */
+        }
+
+        a.contact-link {
+            color: #00ff7f;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a.contact-link:hover {
+            color: #00ff00;
+        }
+
+        a.back-link {
+            color: #00ff00;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            border: 1px solid #00ff00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a.back-link:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card" style="top: 10%; left: 10%; animation-delay: 0s;"></div>
+    <div class="card" style="top: 50%; left: 50%; animation-delay: 2s;"></div>
+    <div class="card" style="top: 30%; left: 70%; animation-delay: 4s;"></div>
+    <div class="card" style="top: 70%; left: 20%; animation-delay: 6s;"></div>
+    
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Name:</strong> Nawaraj Khanal
+            </div>
+            <div class="contact-item">
+                <strong>Email:</strong> <a href="mailto:nawaraajkhanal@gmail.com" class="contact-link">nawaraajkhanal@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>Phone:</strong> <a href="tel:+9779806077010" class="contact-link">+9779806077010</a>
+            </div>
+            <div class="contact-item">
+                <strong>Location:</strong> Laxmipur, Nepal
+            </div>
+        </div>
+        <a href="index.html" class="back-link">&lt; Back to Terminal</a>
+    </div>
+</body>
+</html>

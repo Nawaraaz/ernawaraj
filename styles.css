@@ -1,0 +1,74 @@
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    overflow: hidden;
+    color: #00ff00; /* Terminal green color */
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind the terminal */
+}
+
+#terminal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 50vh;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    position: relative;
+}
+
+#terminal-output {
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: 40vh;
+}
+
+#terminal-input {
+    display: flex;
+    align-items: center;
+}
+
+#command-input {
+    border: none;
+    background: none;
+    color: #00ff00;
+    outline: none;
+    width: 100%;
+}
+
+#cursor {
+    animation: blink 1s step-end infinite; /* Blinking cursor animation */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
