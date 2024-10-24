@@ -11,11 +11,11 @@
             background-color: #1e1e1e;
             color: #00ff00;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Set min-height */
+            overflow: auto; /* Allow scrolling */
             position: relative;
         }
 
@@ -28,6 +28,7 @@
             text-align: center;
             position: relative;
             z-index: 2; /* Ensures it stays above the background */
+            margin: 20px; /* Added margin */
         }
 
         .about-container h1 {
@@ -60,7 +61,6 @@
             display: inline-block;
             border: 1px solid #00ff00;
             padding: 10px 20px;
-            border-radius: 5px;
         }
 
         a.back-link:hover {
@@ -93,12 +93,28 @@
             75% { transform: translate(0, -100vh); }
             100% { transform: translate(0, 0); }
         }
-        
+
         /* Add more circles for more animation effects */
         .circle:nth-child(1) { width: 150px; height: 150px; top: 20%; left: 20%; }
         .circle:nth-child(2) { width: 100px; height: 100px; top: 50%; left: 40%; }
         .circle:nth-child(3) { width: 120px; height: 120px; top: 70%; left: 70%; }
         .circle:nth-child(4) { width: 80px; height: 80px; top: 30%; left: 80%; }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .about-container {
+                padding: 20px;
+                margin: 10px; /* Adjust margin */
+            }
+
+            .about-container p {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+
+            a.back-link {
+                padding: 8px 16px; /* Adjust padding for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -132,3 +148,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
