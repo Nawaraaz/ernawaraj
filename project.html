@@ -13,8 +13,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden; /* Prevent scrolling */
+            min-height: 100vh; /* Allow full height */
+            overflow: auto; /* Allow scrolling if needed */
+            padding: 20px; /* Add padding to prevent content from touching the edges */
         }
 
         .projects-container {
@@ -123,6 +124,10 @@
 
         /* Responsive Styles */
         @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Less padding on mobile */
+            }
+
             .projects-container {
                 padding: 20px;
             }
@@ -133,6 +138,14 @@
 
             a.back-link {
                 padding: 8px 16px; /* Adjust padding for smaller screens */
+            }
+
+            .projects-container h1 {
+                font-size: 24px; /* Adjust heading size for smaller screens */
+            }
+
+            .project h2 {
+                font-size: 18px; /* Adjust project title size for smaller screens */
             }
         }
     </style>
